@@ -1,3 +1,13 @@
+# Öffentlicher Ordner: hebt die Sperre aus der .htaccess des Projektordners auf.
+# (Apache wendet .htaccess-Dateien auch auf alle Unterordner an.)
+<IfModule mod_authz_core.c>
+    Require all granted
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Allow from all
+</IfModule>
+
 Options -Indexes
 DirectoryIndex index.php
 

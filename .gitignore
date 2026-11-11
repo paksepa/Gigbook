@@ -9,3 +9,5 @@
 /vorlage/*.zip
 # Upload-Paket für den Webspace
 /gigbook-upload.zip
+# lokal vorbereitete Dateien für den Webspace (Datenbank!)
+/zum-hochladen/
