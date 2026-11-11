@@ -19,7 +19,11 @@ $navi = [
 <meta name="basis" content="<?= e(basis_pfad()) ?>">
 <?php if ($angemeldet): ?><meta name="csrf" content="<?= e(Auth::csrfToken()) ?>"><?php endif ?>
 <title><?= e($titel !== '' ? $titel . ' · ' . APP_NAME : APP_NAME) ?></title>
+<link rel="icon" href="<?= e(url('/favicon.ico')) ?>" sizes="32x32">
 <link rel="icon" href="<?= e(url('/assets/icon.svg')) ?>" type="image/svg+xml">
+<link rel="apple-touch-icon" href="<?= e(url('/assets/apple-touch-icon.png')) ?>">
+<link rel="manifest" href="<?= e(url('/manifest.webmanifest')) ?>">
+<meta name="apple-mobile-web-app-title" content="<?= APP_NAME ?>">
 <link rel="stylesheet" href="<?= e(url('/assets/app.css')) ?>?v=<?= @filemtime(APP_ROOT . '/public/assets/app.css') ?: APP_VERSION ?>">
 <script src="<?= e(url('/assets/app.js')) ?>?v=<?= @filemtime(APP_ROOT . '/public/assets/app.js') ?: APP_VERSION ?>" defer></script>
 </head>
