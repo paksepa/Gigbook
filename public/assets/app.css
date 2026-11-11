@@ -318,8 +318,15 @@ input.fehlerhaft { border-color: var(--rot); }
 .werksuche summary { cursor: pointer; color: var(--akzent); min-height: 44px; display: flex; align-items: center; }
 .werksuche .treffer button { min-height: 0; }
 
-.login { max-width: 380px; margin: 12vh auto 0; }
-.login h1 { text-align: center; margin-bottom: 24px; }
+.login { max-width: 400px; margin: 14vh auto 0; }
+.login h1 { text-align: center; font-size: 1.9rem; margin-bottom: 28px; }
+.login form.karte { display: flex; flex-direction: column; gap: 24px; padding: 32px 28px; }
+.login form.karte .hinweis { margin: 0; }
+.login label { margin: 0; font-size: 1rem; }
+.login label input { margin-top: 10px; min-height: 50px; }
+.login .knopf { min-height: 50px; font-size: 1.05rem; }
+@supports (text-box: trim-both cap alphabetic) { .login .knopf { padding-block: calc((48px - 1cap) / 2); } }
+@media (max-width: 480px) { .login form.karte { padding: 24px 20px; } }
 
 .toast {
   position: fixed; left: 50%; bottom: calc(var(--navi-hoehe) + 24px + env(safe-area-inset-bottom)); transform: translateX(-50%);
