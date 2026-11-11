@@ -1,0 +1,11 @@
+/config.php
+/data/*
+!/data/.htaccess
+/.env
+# persönlicher Werke-Export aus dem GEMA-Portal (Mitgliedsnummer, IP-Nummern)
+/vorlage/Werke_*.xlsx
+# persönliche GEMA-Abrechnungen (Beträge, Mitgliedsnummer)
+/vorlage/*.csv
+/vorlage/*.zip
+# Upload-Paket für den Webspace
+/gigbook-upload.zip

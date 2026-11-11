@@ -1,0 +1,19 @@
+# Optional – nur für Betrieb mit Docker (nicht für den netcup-Webspace).
+# Passwort-Hash in eine Datei .env neben dieser Datei schreiben:
+#   APP_PASSWORD_HASH='$2y$10$....'      (einfache Anführungszeichen!)
+services:
+  gigbook:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:80"
+    environment:
+      APP_PASSWORD_HASH: ${APP_PASSWORD_HASH:?Bitte APP_PASSWORD_HASH in .env setzen}
+      APP_SESSION_DAYS: "30"
+      # Bei Reverse Proxy auf demselben Host (z. B. Caddy im Docker-Netz) dessen IP eintragen:
+      # APP_TRUSTED_PROXIES: "172.17.0.1"
+    volumes:
+      - gigbook-daten:/var/www/app/data
+
+volumes:
+  gigbook-daten:

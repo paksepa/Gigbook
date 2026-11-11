@@ -1,0 +1,8 @@
+# Schutz: Falls das Projektverzeichnis versehentlich als Document Root eingestellt ist,
+# ist nichts abrufbar. Document Root muss auf den Ordner public/ zeigen (siehe README).
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Deny from all
+</IfModule>

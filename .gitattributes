@@ -1,0 +1,5 @@
+# Einheitliche Zeilenenden (LF), Excel-Vorlage als Binärdatei
+* text=auto eol=lf
+*.xlsx binary
+*.zip binary
+*.sqlite binary
